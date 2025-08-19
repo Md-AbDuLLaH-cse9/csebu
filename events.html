@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Department of CSE | University of Barishal</title>
+  <meta name="description" content="University of Barishal — Department of Computer Science & Engineering" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter","ui-sans-serif","system-ui"] },
+          colors: {
+            bu: { DEFAULT: "#0b5b8e", dark: "#084a73", light: "#e6f3fa", accent: "#f59e0b" }
+          },
+          boxShadow: { glow: "0 10px 30px -12px rgba(11,91,142,0.35)" }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+  <nav class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3">
+           <div >
+            <img class="w-9 h-9 rounded-full" src="/assets/logo.jpg" alt="">
+        </div>
+        <div>
+          <p class="text-sm leading-none text-slate-500">University of Barishal</p>
+          <p class="font-semibold leading-tight">Department of CSE</p>
+        </div>
+      </a>
+      <button class="md:hidden p-2 rounded-lg border border-slate-200" aria-label="Open menu" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <ul class="hidden md:flex items-center gap-6 text-sm">
+        <li><a data-nav href="index.html" class="hover:text-bu">Home</a></li>
+        <li><a data-nav href="about.html" class="hover:text-bu">About</a></li>
+        <li><a data-nav href="programs.html" class="hover:text-bu">Programs</a></li>
+        <li><a data-nav href="faculty.html" class="hover:text-bu">Faculty</a></li>
+        <li><a data-nav href="research.html" class="hover:text-bu">Research</a></li>
+        <li><a data-nav href="notices.html" class="hover:text-bu">Notices</a></li>
+        <li><a data-nav href="events.html" class="hover:bg-blue-300 bg-blue-500 px-6 py-2 rounded-lg text-white" >Events</a></li>
+        <li><a data-nav href="contact.html" class="hover:text-bu">Contact</a></li>
+        <li><a data-nav href="apply.html" class="ml-2 inline-flex items-center rounded-lg bg-bu text-white px-3 py-2 hover:bg-bu-dark">Apply</a></li>
+      </ul>
+    </div>
+    <ul id="mobileMenu" class="md:hidden hidden pb-4 space-y-2 text-sm">
+         <li><a data-nav href="index.html" class="hover:text-bu">Home</a></li>
+      <li><a data-nav href="about.html" class="hover:bg-blue-300 bg-blue-500 px-6 py-2 rounded-lg text-white">About</a></li>
+      <li><a data-nav href="programs.html" class="block px-2 py-2 rounded hover:bg-slate-50">Programs</a></li>
+      <li><a data-nav href="faculty.html" class="block px-2 py-2 rounded hover:bg-slate-50">Faculty</a></li>
+      <li><a data-nav href="research.html" class="block px-2 py-2 rounded hover:bg-slate-50">Research</a></li>
+      <li><a data-nav href="notices.html" class="block px-2 py-2 rounded hover:bg-slate-50">Notices</a></li>
+      <li><a data-nav href="events.html" class="block px-2 py-2 rounded hover:bg-slate-50">Events</a></li>
+      <li><a data-nav href="contact.html" class="block px-2 py-2 rounded hover:bg-slate-50">Contact</a></li>
+      <li><a data-nav href="apply.html" class="block px-2 py-2 rounded text-white bg-bu hover:bg-bu-dark">Apply</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="font-sans antialiased bg-white text-slate-800">
+
+  <!-- Page Header -->
+  <section class="bg-gradient-to-br from-bu to-bu-dark text-white">
+    <div class="max-w-7xl mx-auto px-4 py-14">
+      <h1 class="text-3xl md:text-4xl font-extrabold">Events</h1>
+      <p class="mt-3 text-white/80 max-w-2xl">
+        Talks, workshops, hackathons, and community activities from the Department of CSE.
+      </p>
+    </div>
+  </section>
+
+  <!-- Upcoming Events + Filters -->
+  <section class="max-w-7xl mx-auto px-4 py-14">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <div>
+        <h2 class="text-2xl font-bold text-bu">Upcoming Events</h2>
+        <p class="mt-2 text-slate-600">Don’t miss what’s happening this semester.</p>
+      </div>
+      <!-- Simple filters (static tags; can wire up later with JS) -->
+      <div class="flex flex-wrap gap-2 text-xs">
+        <span class="px-3 py-1 rounded-full border border-slate-200 bg-white">All</span>
+        <span class="px-3 py-1 rounded-full border border-slate-200 bg-white">Talk</span>
+        <span class="px-3 py-1 rounded-full border border-slate-200 bg-white">Workshop</span>
+        <span class="px-3 py-1 rounded-full border border-slate-200 bg-white">Hackathon</span>
+        <span class="px-3 py-1 rounded-full border border-slate-200 bg-white">Community</span>
+      </div>
+    </div>
+
+    <!-- Event Cards -->
+    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Event Card -->
+      <article class="rounded-2xl border border-slate-200 bg-white overflow-hidden hover:shadow-lg hover:scale-[1.01] transition">
+        <img src="assets/img/event-ai-talk.jpg" alt="AI Guest Talk" class="w-full h-40 object-cover">
+        <div class="p-6">
+          <div class="flex items-center justify-between">
+            <span class="text-xs px-2 py-1 rounded-full bg-bu text-white">Talk</span>
+            <time class="text-sm text-slate-500">Sep 05, 2025 • 3:00 PM</time>
+          </div>
+          <h3 class="mt-3 font-semibold">Guest Talk: Responsible AI in the Real World</h3>
+          <p class="mt-2 text-sm text-slate-600">Speaker: Dr. N. Karim (Industry)</p>
+          <p class="mt-1 text-sm text-slate-600">Venue: CSE Seminar Hall</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs">
+            <a href="#" class="px-3 py-1 rounded bg-bu text-white">Details</a>
+            <a href="assets/events/ai-talk.ics" class="px-3 py-1 rounded bg-bu/10 text-bu">Add to Calendar</a>
+            <a href="contact.html" class="px-3 py-1 rounded bg-bu/10 text-bu">Register</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rounded-2xl border border-slate-200 bg-white overflow-hidden hover:shadow-lg hover:scale-[1.01] transition">
+        <img src="assets/img/event-hack.jpg" alt="Hackathon" class="w-full h-40 object-cover">
+        <div class="p-6">
+          <div class="flex items-center justify-between">
+            <span class="text-xs px-2 py-1 rounded-full bg-bu text-white">Hackathon</span>
+            <time class="text-sm text-slate-500">Sep 12–13, 2025</time>
+          </div>
+          <h3 class="mt-3 font-semibold">BU CSE 24-Hour Hackathon</h3>
+          <p class="mt-2 text-sm text-slate-600">Theme: Health & Sustainability</p>
+          <p class="mt-1 text-sm text-slate-600">Venue: Lab Complex</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs">
+            <a href="#" class="px-3 py-1 rounded bg-bu text-white">Details</a>
+            <a href="assets/events/hackathon.ics" class="px-3 py-1 rounded bg-bu/10 text-bu">Add to Calendar</a>
+            <a href="contact.html" class="px-3 py-1 rounded bg-bu/10 text-bu">Register</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rounded-2xl border border-slate-200 bg-white overflow-hidden hover:shadow-lg hover:scale-[1.01] transition">
+        <img src="assets/img/event-workshop.jpg" alt="Workshop" class="w-full h-40 object-cover">
+        <div class="p-6">
+          <div class="flex items-center justify-between">
+            <span class="text-xs px-2 py-1 rounded-full bg-bu text-white">Workshop</span>
+            <time class="text-sm text-slate-500">Sep 20, 2025 • 10:00 AM</time>
+          </div>
+          <h3 class="mt-3 font-semibold">Hands-on Workshop: Kubernetes for Beginners</h3>
+          <p class="mt-2 text-sm text-slate-600">Trainer: Systems Lab</p>
+          <p class="mt-1 text-sm text-slate-600">Venue: Lab 204</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs">
+            <a href="#" class="px-3 py-1 rounded bg-bu text-white">Details</a>
+            <a href="assets/events/k8s-workshop.ics" class="px-3 py-1 rounded bg-bu/10 text-bu">Add to Calendar</a>
+            <a href="contact.html" class="px-3 py-1 rounded bg-bu/10 text-bu">Register</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  
+
+  <!-- Past Events -->
+  <section class="max-w-7xl mx-auto px-4 py-14">
+    <h2 class="text-2xl font-bold text-bu">Past Events</h2>
+    <p class="mt-2 text-slate-600">Highlights from previous semesters.</p>
+
+    <ul class="mt-8 space-y-4">
+      <li class="rounded-2xl border border-slate-200 bg-white p-5">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <h3 class="font-semibold">Annual Research Showcase 2025</h3>
+          <span class="text-sm text-slate-500">May 28, 2025</span>
+        </div>
+        <p class="mt-2 text-sm text-slate-600">Poster sessions, demos, and invited talks.</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <a href="#" class="px-3 py-1 rounded bg-bu/10 text-bu">Photos</a>
+          <a href="#" class="px-3 py-1 rounded bg-bu/10 text-bu">Program</a>
+          <a href="#" class="px-3 py-1 rounded bg-bu/10 text-bu">Proceedings</a>
+        </div>
+      </li>
+
+      <li class="rounded-2xl border border-slate-200 bg-white p-5">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <h3 class="font-semibold">Industry Meetup: Cloud & DevOps</h3>
+          <span class="text-sm text-slate-500">Apr 10, 2025</span>
+        </div>
+        <p class="mt-2 text-sm text-slate-600">Talks by alumni working in leading tech companies.</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <a href="#" class="px-3 py-1 rounded bg-bu/10 text-bu">Slides</a>
+          <a href="#" class="px-3 py-1 rounded bg-bu/10 text-bu">Recap</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+ 
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-bu text-white">
+  <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
+    <!-- Logo + about -->
+    <div>
+      <div class="w-12 h-12 rounded-xl bg-white text-bu font-bold grid place-items-center shadow-md">BU</div>
+      <p class="mt-4 text-bu-light/90">
+        Department of Computer Science & Engineering, University of Barishal.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="font-semibold mb-4 text-white/90 uppercase tracking-wide">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="programs.html" class="hover:text-bu-accent transition">Programs</a></li>
+        <li><a href="faculty.html" class="hover:text-bu-accent transition">Faculty</a></li>
+        <li><a href="research.html" class="hover:text-bu-accent transition">Research</a></li>
+        <li><a href="apply.html" class="hover:text-bu-accent transition">Apply</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h3 class="font-semibold mb-4 text-white/90 uppercase tracking-wide">Contact</h3>
+      <p class="text-bu-light/90">Barishal, Bangladesh</p>
+      <p class="text-bu-light/90">Email: cse@barishal.edu.bd</p>
+      <p class="text-bu-light/90">Phone: +880-XXX-XXXXXX</p>
+    </div>
+
+    <!-- Social -->
+    <div>
+      <h3 class="font-semibold mb-4 text-white/90 uppercase tracking-wide">Follow Us</h3>
+      <div class="flex gap-4">
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-bu-accent hover:text-slate-900 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.675 0h-21.35C.597 0 0 .598 0 1.333v21.333C0 23.402.597 24 1.325 24h11.497v-9.294H9.692V11.01h3.13V8.309c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.797.143v3.24h-1.92c-1.505 0-1.797.716-1.797 1.764v2.31h3.59l-.467 3.696h-3.123V24h6.117C23.403 24 24 23.402 24 22.666V1.333C24 .598 23.403 0 22.675 0z"/>
+          </svg>
+        </a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-bu-accent hover:text-slate-900 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.037-1.852-3.037-1.853 0-2.137 1.445-2.137 2.939v5.667H9.348V9.5h3.414v1.496h.047c.476-.9 1.635-1.852 3.366-1.852 3.594 0 4.259 2.364 4.259 5.438v6.87zM5.337 8.004a2.063 2.063 0 110-4.126 2.063 2.063 0 010 4.126zM6.897 20.452H3.777V9.5h3.12v10.952zM22.225 0H1.771C.792 0 0 .792 0 1.771v20.457C0 23.207.792 24 1.771 24h20.457C23.207 24 24 23.207 24 22.229V1.771C24 .792 23.207 0 22.225 0z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- bottom strip -->
+  <div class="text-center text-xs text-bu-light/80 border-t border-white/10 py-4">
+    © 2025 University of Barishal — CSE
+  </div>
+</footer>
+</body>
+</html>
