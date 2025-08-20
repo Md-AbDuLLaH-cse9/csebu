@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+    <header class="sticky top-0 z-50 bg-bu-light backdrop-blur border-b border-slate-100">
   <nav class="max-w-7xl mx-auto px-4">
     <div class="flex items-center justify-between h-16">
       <a href="index.html" class="flex items-center gap-3">
@@ -51,7 +51,7 @@
         <li><a data-nav href="notices.html" class="hover:text-bu">Notices</a></li>
         <li><a data-nav href="events.html" class="hover:text-bu">Events</a></li>
         <li><a data-nav href="contact.html" class="hover:text-bu">Contact</a></li>
-        <li><a data-nav href="apply.html" class="ml-2 inline-flex items-center rounded-lg bg-bu text-white px-3 py-2 hover:bg-bu-dark">Apply</a></li>
+        <li><a data-nav href="apply.html" class="ml-2 inline-flex items-center rounded-lg bg-[#547792] text-white px-3 py-2 hover:bg-bu-dark">Apply</a></li>
       </ul>
     </div>
     <ul id="mobileMenu" class="md:hidden hidden pb-4 space-y-2 text-sm">
@@ -70,30 +70,24 @@
 
 
 
-<section class="relative isolate overflow-hidden bg-gradient-to-br from-bu to-bu-dark text-white">
-      <div class="max-w-7xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
-            Department of Computer Science & Engineering
-          </h1>
-          <p class="mt-4 text-white/90 md:text-lg">
-            Advancing learning, research, and innovation in computing at the University of Barishal.
-          </p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="programs.html" class="inline-flex items-center rounded-lg bg-white text-bu px-4 py-2 font-semibold shadow hover:shadow-lg">Explore Programs</a>
-            <a href="apply.html" class="inline-flex items-center rounded-lg bg-bu-accent text-slate-900 px-4 py-2 font-semibold shadow hover:shadow-lg">Apply Now</a>
-          </div>
-        </div>
-        <div class="relative">
-          <div class="aspect-video rounded-2xl bg-white/10 ring-1 ring-white/20 backdrop-blur overflow-hidden">
-            <!-- Replace src with a campus image -->
-            <img src="assets/hero.jpg" alt="University of Barishal CSE" class="w-full h-full object-cover">
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="relative w-full h-[80vh] bg-cover bg-center text-white" style="background-image: url('assets/uni.jpg');">
+  <div class="absolute inset-0 bg-black opacity-30"></div>
+  <div class="flex justify-center items-center flex-col h-full max-w-7xl mx-auto px-4 py-20 md:py-28 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+      Department of Computer Science & Engineering
+    </h1>
+    <p class="mt-4 text-white/90 md:text-lg">
+      Advancing learning, research, and innovation in computing at the University of Barishal.
+    </p>
+    <div class="mt-6 flex justify-center gap-6">
+      <a href="programs.html" class="inline-flex items-center rounded-lg bg-white text-bu px-6 py-3 font-semibold shadow hover:shadow-lg">Explore Programs</a>
+      <a href="apply.html" class="inline-flex items-center rounded-lg bg-bu-accent text-slate-900 px-6 py-3 font-semibold shadow hover:shadow-lg">Apply Now</a>
+    </div>
+  </div>
+</section>
 
-<!-- Quick stats with hover effect -->
+
+
 <section class="max-w-7xl mx-auto px-4 py-12 grid sm:grid-cols-3 gap-6">
   <div class="p-6 rounded-2xl border border-slate-200 transition duration-300 hover:shadow-lg hover:scale-105 hover:border-bu bg-white">
     <p class="text-3xl font-extrabold text-bu">800+</p>
@@ -110,7 +104,7 @@
 </section>
 
 
-    <!-- Notices preview -->
+
     <section class="bg-bu-light">
       <div class="max-w-7xl mx-auto px-4 py-12">
         <h2 class="text-2xl font-bold">Latest Notices</h2>
@@ -130,10 +124,12 @@
       </div>
     </section>
 
-    <!-- Footer -->
- <footer class="bg-bu text-white">
+
+
+
+ <footer class="bg-[#547792] text-white">
   <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
-    <!-- Logo + about -->
+
     <div>
       <div class="w-12 h-12 rounded-xl bg-white text-bu font-bold grid place-items-center shadow-md">BU</div>
       <p class="mt-4 text-bu-light/90">
@@ -141,7 +137,7 @@
       </p>
     </div>
 
-    <!-- Quick Links -->
+
     <div>
       <h3 class="font-semibold mb-4 text-white/90 uppercase tracking-wide">Quick Links</h3>
       <ul class="space-y-2">
@@ -152,7 +148,7 @@
       </ul>
     </div>
 
-    <!-- Contact -->
+
     <div>
       <h3 class="font-semibold mb-4 text-white/90 uppercase tracking-wide">Contact</h3>
       <p class="text-bu-light/90">Barishal, Bangladesh</p>
@@ -160,7 +156,7 @@
       <p class="text-bu-light/90">Phone: +880-XXX-XXXXXX</p>
     </div>
 
-    <!-- Social -->
+
     <div>
       <h3 class="font-semibold mb-4 text-white/90 uppercase tracking-wide">Follow Us</h3>
       <div class="flex gap-4">
@@ -178,12 +174,18 @@
     </div>
   </div>
 
-  <!-- bottom strip -->
+
   <div class="text-center text-xs text-bu-light/80 border-t border-white/10 py-4">
     © 2025 University of Barishal — CSE
   </div>
 </footer>
 
+<script>
+  function toggleMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.toggle('hidden');
+  }
+</script>
 
 
 </body>

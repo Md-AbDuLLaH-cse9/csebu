@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+    <header class="sticky top-0 z-50 bg-bu-light backdrop-blur border-b border-slate-100">
   <nav class="max-w-7xl mx-auto px-4">
     <div class="flex items-center justify-between h-16">
       <a href="index.html" class="flex items-center gap-3">
@@ -51,18 +51,18 @@
         <li><a data-nav href="notices.html" class="hover:text-bu">Notices</a></li>
         <li><a data-nav href="events.html" class="hover:text-bu">Events</a></li>
         <li><a data-nav href="contact.html" class="hover:bg-blue-300 bg-blue-500 px-6 py-2 rounded-lg text-white">Contact</a></li>
-        <li><a data-nav href="apply.html" class="ml-2 inline-flex items-center rounded-lg bg-bu text-white px-3 py-2 hover:bg-bu-dark">Apply</a></li>
+        <li><a data-nav href="apply.html" class="ml-2 inline-flex items-center rounded-lg bg-[#547792] text-white px-3 py-2 hover:bg-bu-dark">Apply</a></li>
       </ul>
     </div>
     <ul id="mobileMenu" class="md:hidden hidden pb-4 space-y-2 text-sm">
          <li><a data-nav href="index.html" class="hover:text-bu">Home</a></li>
-      <li><a data-nav href="about.html" class="hover:bg-blue-300 bg-blue-500 px-6 py-2 rounded-lg text-white">About</a></li>
+      <li><a data-nav href="about.html" class="block px-2 py-2 rounded hover:bg-slate-50">About</a></li>
       <li><a data-nav href="programs.html" class="block px-2 py-2 rounded hover:bg-slate-50">Programs</a></li>
       <li><a data-nav href="faculty.html" class="block px-2 py-2 rounded hover:bg-slate-50">Faculty</a></li>
       <li><a data-nav href="research.html" class="block px-2 py-2 rounded hover:bg-slate-50">Research</a></li>
       <li><a data-nav href="notices.html" class="block px-2 py-2 rounded hover:bg-slate-50">Notices</a></li>
       <li><a data-nav href="events.html" class="block px-2 py-2 rounded hover:bg-slate-50">Events</a></li>
-      <li><a data-nav href="contact.html" class="block px-2 py-2 rounded hover:bg-slate-50">Contact</a></li>
+      <li><a data-nav href="contact.html" class="block px-2 py-2 rounded hover:bg-slate-50 bg-blue-500 px-6 py-2 rounded-lg text-white">Contact</a></li>
       <li><a data-nav href="apply.html" class="block px-2 py-2 rounded text-white bg-bu hover:bg-bu-dark">Apply</a></li>
     </ul>
   </nav>
@@ -72,8 +72,8 @@
 
 <main class="font-sans antialiased bg-white text-slate-800">
 
-  <!-- Page Header -->
-  <section class="bg-gradient-to-br from-bu to-bu-dark text-white">
+
+  <section class="bg-[#547792] text-white">
     <div class="max-w-7xl mx-auto px-4 py-14">
       <h1 class="text-3xl md:text-4xl font-extrabold">Contact Us</h1>
       <p class="mt-3 text-white/80 max-w-2xl">
@@ -82,11 +82,10 @@
     </div>
   </section>
 
-  <!-- Quick Contacts -->
   <section class="max-w-7xl mx-auto px-4 py-14">
     <h2 class="text-2xl font-bold text-bu">Department Contacts</h2>
     <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Card -->
+
       <article class="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition">
         <h3 class="font-semibold">Academic Office</h3>
         <p class="mt-1 text-sm text-slate-600">Course registration, exams, transcripts</p>
@@ -119,10 +118,9 @@
     </div>
   </section>
 
-  <!-- Info + Form -->
   <section class="max-w-7xl mx-auto px-4 pb-14">
     <div class="grid lg:grid-cols-5 gap-10">
-      <!-- Info (2 cols) -->
+
       <aside class="lg:col-span-2 space-y-6">
         <div class="rounded-2xl border border-slate-200 bg-white p-6">
           <h2 class="text-xl font-bold text-bu">Visit Us</h2>
@@ -144,7 +142,6 @@
         </div>
 
         <div class="rounded-2xl border border-slate-200 bg-white p-1 overflow-hidden">
-          <!-- Map placeholder (replace src with actual map embed) -->
           <iframe
             title="Department Location Map"
             class="w-full h-64"
@@ -154,16 +151,12 @@
         </div>
       </aside>
 
-      <!-- Form (3 cols) -->
       <section class="lg:col-span-3">
         <div class="rounded-2xl border border-slate-200 bg-white p-6 md:p-8">
           <h2 class="text-2xl font-bold text-bu">Send a Message</h2>
           <p class="mt-2 text-slate-600 text-sm">We’ll get back to you via email.</p>
 
-          <!-- Success/alert placeholder (show via JS/server after submit) -->
-          <!-- <div class="mt-4 rounded-lg bg-green-50 border border-green-200 text-green-700 text-sm p-3">
-            Your message was sent. We’ll reply soon.
-          </div> -->
+          
 
           <form action="#" method="post" class="mt-6 space-y-5">
             <div class="grid md:grid-cols-2 gap-4">
@@ -221,16 +214,7 @@
             </div>
           </form>
         </div>
-
-        <!-- Small FAQ/links strip -->
-        <div class="mt-6 rounded-2xl bg-bu-light border border-slate-200 p-4 text-sm">
-          <p class="font-medium text-slate-800">Quick help:</p>
-          <ul class="mt-2 list-disc list-inside text-slate-700 space-y-1">
-            <li><a href="notices.html" class="text-bu hover:underline">Check recent notices</a></li>
-            <li><a href="programs.html" class="text-bu hover:underline">Program details & curriculum</a></li>
-            <li><a href="faculty.html" class="text-bu hover:underline">Find a faculty member</a></li>
-          </ul>
-        </div>
+        
       </section>
     </div>
   </section>
@@ -241,39 +225,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<footer class="bg-bu text-white">
+<footer class="bg-[#547792] text-white">
   <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
-    <!-- Logo + about -->
     <div>
       <div class="w-12 h-12 rounded-xl bg-white text-bu font-bold grid place-items-center shadow-md">BU</div>
       <p class="mt-4 text-bu-light/90">
@@ -281,7 +234,6 @@
       </p>
     </div>
 
-    <!-- Quick Links -->
     <div>
       <h3 class="font-semibold mb-4 text-white/90 uppercase tracking-wide">Quick Links</h3>
       <ul class="space-y-2">
@@ -292,7 +244,6 @@
       </ul>
     </div>
 
-    <!-- Contact -->
     <div>
       <h3 class="font-semibold mb-4 text-white/90 uppercase tracking-wide">Contact</h3>
       <p class="text-bu-light/90">Barishal, Bangladesh</p>
@@ -300,7 +251,6 @@
       <p class="text-bu-light/90">Phone: +880-XXX-XXXXXX</p>
     </div>
 
-    <!-- Social -->
     <div>
       <h3 class="font-semibold mb-4 text-white/90 uppercase tracking-wide">Follow Us</h3>
       <div class="flex gap-4">
@@ -318,10 +268,17 @@
     </div>
   </div>
 
-  <!-- bottom strip -->
   <div class="text-center text-xs text-bu-light/80 border-t border-white/10 py-4">
     © 2025 University of Barishal — CSE
   </div>
 </footer>
+
+<script>
+  function toggleMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.toggle('hidden');
+  }
+</script>
+
 </body>
 </html>
